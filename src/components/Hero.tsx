@@ -2,17 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
 	return (
-		<div className='h-screen w-screen'>
-			<div className='relative h-[705px]'>
-				<Image
-					src='/website_hero.png'
-					alt='Hero Background'
-					fill={true}
-					quality={100}
-					objectFit='cover'
-				/>
-			</div>
-			<div className='absolute inset-0 flex flex-col items-center justify-center text-center px-4'>
+		<div className='relative h-[705px] w-screen'>
+			<div className='absolute inset-0 flex flex-col items-center justify-end text-center px-4 m-10 z-1'>
 				<h1 className='text-4xl sm:text-5xl lg:text-6xl font-title uppercase'>
 					Sacha Altaber
 				</h1>
@@ -26,6 +17,25 @@ export default function Hero() {
 					Get Started
 				</a>
 			</div>
+			<Image
+				className='-z-2'
+				src='/hero_bg.png'
+				alt='Hero Background'
+				fill={true}
+				quality={100}
+				objectFit='cover'
+			/>
+
+			<div className='fixed top-0 w-screen h-[705px] justify-center flex -z-1'>
+				<Image
+					src='/hero_stars.svg'
+					alt='Hero Background'
+					fill={true}
+					quality={100}
+					objectFit='cover'
+				/>
+			</div>
+			<div className='absolute bottom-0 w-screen h-[150px] justify-center flex bg-gradient-to-t from-background to-transparent'></div>
 		</div>
 	);
 }
