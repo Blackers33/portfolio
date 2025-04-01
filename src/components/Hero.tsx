@@ -3,16 +3,16 @@ import Image from "next/image";
 export default function Hero() {
 	return (
 		<div className='relative h-[705px]'>
-			<div className='absolute inset-0 flex flex-col items-center justify-end text-center px-4 my-30 z-1'>
+			<div className='absolute inset-0 flex flex-col items-center justify-end text-center px-4 my-10 z-1'>
 				<h1 className='text-4xl sm:text-5xl lg:text-6xl font-title uppercase'>
 					Sacha Altaber
 				</h1>
-				<p className='mt-4 text-lg sm:text-xl text-gray-300'>
+				<p className='mt-6 mb-20 text-lg sm:text-xl text-gray-300'>
 					Développeur web fullstack React, React Native, NextJS & Node.
 				</p>
 				<a
 					href='#'
-					className='mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition'
+					className='px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition'
 				>
 					Contact
 				</a>

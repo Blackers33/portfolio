@@ -3,7 +3,7 @@
 :root {
   --background: #151515;
   --foreground: #ffffff;
-  --primary: #627e9cff;
+  --primary: #5a819fff;
   --secondary: #a6c3e3ff;
 }
 
@@ -22,6 +22,19 @@
 
 html {
   scroll-behavior: smooth !important;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scrollLeft {
+  animation: scrollLeft 10s linear infinite;
 }
 
 @font-face {
