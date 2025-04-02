@@ -16,7 +16,7 @@ export default function Navbar() {
 
 	function elementDisplay(element: NavElement, index: number) {
 		return (
-			<div className='flex items-center'>
+			<div key={index} className='flex items-center'>
 				<Link
 					href={element.url}
 					className={`font-mono relative group ${
@@ -43,14 +43,14 @@ export default function Navbar() {
 
 	return (
 		<div className='fixed top-0 w-screen z-2'>
-			<div className='flex w-full justify-between p-4 sm:px-10'>
+			<div className='flex w-full justify-between p-4 sm:px-10 align-middle'>
 				<div className='hidden md:inline font-mono text-2xl self-center'>
 					sachaa.fr
 				</div>
 				<nav className='backdrop-blur-xl bg-white/5 rounded-2xl shadow-[0_8px_32px_0_rgba(231,238,235,0.2)] border border-white/20 flex items-center justify-between px-8 py-4 w-full sm:w-auto gap-5'>
 					{navElements.map((element, index) => elementDisplay(element, index))}
 				</nav>
-				<div className='hidden md:flex self-center space-x-8 '>
+				<div className='fixed bottom-5 right-5 self-center space-x-8 md:relative md:flex md:bottom-auto md:right-auto'>
 					<Link
 						href='https://github.com/Blackers33'
 						target='_blank'

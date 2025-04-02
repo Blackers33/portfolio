@@ -9,7 +9,10 @@ export default function Home() {
 		<>
 			<Navbar />
 			<Hero />
-			<Manifesto/>
+			<div className='bg-background'>
+				<Manifesto />
+				<Manifesto />
+			</div>
 		</>
 	);
 }

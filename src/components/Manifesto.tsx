@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Manifesto() {
   return (
-		<div className='bg-background px-8 lg:px-80 space-y-4 text-lg leading-relaxed'>
+		<div className='px-8 lg:px-80 space-y-4 text-lg leading-relaxed'>
 			<p className='mb-8'>
 				Après une carrière dans les secteurs des télécommunications, du réseau
 				et de l’audiovisuel, j’ai pris une décision importante : me lancer dans
@@ -27,22 +27,21 @@ export default function Manifesto() {
 				développeur. Je mets à profit non seulement mes connaissances en
 				programmation, mais aussi :
 			</p>
-			<p className='mb-8'>
-				<ul className='list-disc pl-5 space-y-2'>
-					<li>
-						Des compétences en communication, essentielles pour collaborer avec
-						des équipes pluridisciplinaires
-					</li>
-					<li>
-						Une approche centrée sur l’utilisateur, axée sur la compréhension du
-						besoin.
-					</li>
-					<li>
-						Une compréhension approfondie des infrastructures technologiques,
-						permettant de concevoir des applications robustes et intégrées
-					</li>
-				</ul>
-			</p>
+
+			<ul className='list-disc pl-5 space-y-2 mb-8'>
+				<li>
+					Des compétences en communication, essentielles pour collaborer avec
+					des équipes pluridisciplinaires
+				</li>
+				<li>
+					Une approche centrée sur l’utilisateur, axée sur la compréhension du
+					besoin.
+				</li>
+				<li>
+					Une compréhension approfondie des infrastructures technologiques,
+					permettant de concevoir des applications robustes et intégrées
+				</li>
+			</ul>
 
 			<p className='mb-8'>
 				Mon parcours, qui m’a conduit des télécommunications au développement

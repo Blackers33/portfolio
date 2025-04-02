@@ -10,12 +10,20 @@ export default function Hero() {
 				<p className='mt-6 mb-20 text-lg sm:text-xl text-gray-300'>
 					Développeur web fullstack React, React Native, NextJS & Node.
 				</p>
-				<a
-					href='#'
-					className='px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition'
-				>
-					Contact
-				</a>
+				<div className="space-x-8">
+					<a
+						href='#'
+						className='px-6 py-3 bg-primary text-white rounded-xl hover:bg-secondary transition'
+					>
+						Portfolio
+					</a>
+					<a
+						href='#'
+						className='px-6 py-3 border-1 border-primary text-primary rounded-xl hover:bg-secondary/20 transition'
+					>
+						Contact
+					</a>
+				</div>
 			</div>
 			<Image
 				className='-z-2'
