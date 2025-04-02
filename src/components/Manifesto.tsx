@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Manifesto() {
   return (
-		<div className='px-8 lg:px-80 space-y-4 text-lg leading-relaxed'>
+		<div className='space-y-4 text-lg leading-relaxed mb-40'>
 			<p className='mb-8'>
 				Après une carrière dans les secteurs des télécommunications, du réseau
 				et de l’audiovisuel, j’ai pris une décision importante : me lancer dans

@@ -1,7 +1,10 @@
+"use client"
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+
 
 type NavElement = { title: string; url: Url };
 
@@ -12,7 +15,7 @@ export default function Navbar() {
 		{ title: "Music", url: "/music" },
 	];
 
-	const activePage: string = "Home";
+	const [activePage, setActivePage] = useState("Home")
 
 	function elementDisplay(element: NavElement, index: number) {
 		return (
@@ -21,15 +24,16 @@ export default function Navbar() {
 					href={element.url}
 					className={`font-mono relative group ${
 						activePage === element.title
-							? "text-white"
+							? "text-white hover:text-secondary"
 							: "text-white/50 hover:text-secondary transition-colors"
 					}`}
+					onClick={() => setActivePage(element.title)}
 				>
 					{element.title}
 					<span
 						className={`absolute bottom-[-4px] left-0 h-[2px] shadow-[0_0_10px_rgba(255,255,255,0.7)] transition-all duration-300 ease-in-out ${
 							activePage === element.title
-								? "w-4 opacity-100 bg-white/70"
+								? "w-4 opacity-100 bg-white/70 group-hover:bg-secondary"
 								: "w-0 opacity-0 group-hover:w-4 group-hover:opacity-100 bg-secondary"
 						}`}
 					></span>
@@ -44,13 +48,13 @@ export default function Navbar() {
 	return (
 		<div className='fixed top-0 w-screen z-2'>
 			<div className='flex w-full justify-between p-4 sm:px-10 align-middle'>
-				<div className='hidden md:inline font-mono text-2xl self-center'>
+				<div className='hidden md:inline font-mono text-2xl self-center w-40'>
 					sachaa.fr
 				</div>
 				<nav className='backdrop-blur-xl bg-white/5 rounded-2xl shadow-[0_8px_32px_0_rgba(231,238,235,0.2)] border border-white/20 flex items-center justify-between px-8 py-4 w-full sm:w-auto gap-5'>
 					{navElements.map((element, index) => elementDisplay(element, index))}
 				</nav>
-				<div className='fixed bottom-5 right-5 self-center space-x-8 md:relative md:flex md:bottom-auto md:right-auto'>
+				<div className='fixed bottom-5 right-5 self-center space-x-8 md:relative md:flex md:bottom-auto md:right-auto w-40'>
 					<Link
 						href='https://github.com/Blackers33'
 						target='_blank'
@@ -64,7 +68,7 @@ export default function Navbar() {
 						rel='noopener noreferrer'
 					>
 						<FaLinkedin className='text-white text-3xl hover:text-blue-600' />
-					</Link>
+					</Link>		
 				</div>
 			</div>
 		</div>
