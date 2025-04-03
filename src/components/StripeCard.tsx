@@ -5,7 +5,7 @@ import { ArrowBigDown, ArrowRight, ChevronRight, Heart } from "lucide-react";
 function StripeCard() {
 	return (
 		<>
-			<div className='w-[90%]] h-[480px] group mx-auto dark:bg-[#252525] p-2 bg-white dark:border-0 border overflow-hidden rounded-md dark:text-white text-black '>
+			<div className='w-[90%]] h-[440px] group mx-auto dark:bg-[#252525] p-2 bg-white dark:border-0 border overflow-hidden rounded-md dark:text-white text-black '>
 				<figure className='w-full h-80 group-hover:h-72 transition-all duration-300 dark:bg-[#0a121a] bg-[#f0f5fa] p-2 rounded-md relative overflow-hidden'>
 					<div
 						style={{
@@ -23,7 +23,7 @@ function StripeCard() {
 					/>
 				</figure>
 				<article className='  p-4 space-y-2'>
-					<div className='h-8 w-20 bg-[#4393fc] rounded-md'></div>
+				
 					<h1 className='text-xl font-semibold capitalize'>
 						Incorporate your company
 					</h1>

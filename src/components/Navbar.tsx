@@ -54,7 +54,7 @@ export default function Navbar() {
 				<nav className='backdrop-blur-xl bg-white/5 rounded-2xl shadow-[0_8px_32px_0_rgba(231,238,235,0.2)] border border-white/20 flex items-center justify-between px-8 py-4 w-full sm:w-auto gap-5'>
 					{navElements.map((element, index) => elementDisplay(element, index))}
 				</nav>
-				<div className='fixed bottom-5 right-5 self-center space-x-8 md:relative md:flex md:bottom-auto md:right-auto w-40'>
+				<div className='fixed bottom-5 right-5 self-center space-x-8 md:relative md:flex md:bottom-auto md:right-auto sm:w-40'>
 					<Link
 						href='https://github.com/Blackers33'
 						target='_blank'

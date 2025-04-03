@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Manifesto() {
+
   return (
 		<div className='space-y-4 text-lg leading-relaxed mb-40'>
 			<p className='mb-8'>
