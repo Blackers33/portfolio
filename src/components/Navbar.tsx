@@ -3,6 +3,7 @@ import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 
 
@@ -68,7 +69,8 @@ export default function Navbar() {
 						rel='noopener noreferrer'
 					>
 						<FaLinkedin className='text-white text-3xl hover:text-blue-600' />
-					</Link>		
+					</Link>
+						<ThemeToggle />
 				</div>
 			</div>
 		</div>
