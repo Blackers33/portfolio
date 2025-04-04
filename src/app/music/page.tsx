@@ -14,7 +14,7 @@ export default function Home() {
 						et, quaerat dignissimos.
 					</p>
 				</div>
-				<div className='bg-background'>
+				<div className='bg-background dark:bg-foreground'>
 					<iframe
 						width='560'
 						height='315'

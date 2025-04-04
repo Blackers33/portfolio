@@ -38,7 +38,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='bg-background px-8 lg:px-80'>
+			<div className='bg-background dark:bg-foreground px-8 lg:px-80'>
 				<div className='space-y-4 text-lg leading-relaxed mb-40'>
 					<p className='mb-8'>
 						Après une carrière dans les secteurs des télécommunications, du
