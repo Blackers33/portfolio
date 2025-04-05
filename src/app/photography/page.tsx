@@ -15,7 +15,7 @@ export default function Home() {
 						et, quaerat dignissimos.
 					</p>
 				</div>
-				<div className='bg-background dark:bg-foreground'>
+				<div className='bg-background'>
 					<PhotoGrid />
 					<PhotoGrid />
 				</div>

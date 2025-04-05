@@ -70,7 +70,7 @@ export default function Navbar() {
 					>
 						<FaLinkedin className='text-white text-3xl hover:text-blue-600' />
 					</Link>
-						{/* <ThemeToggle /> */}
+						<ThemeToggle />
 				</div>
 			</div>
 		</div>
