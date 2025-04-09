@@ -1,19 +1,32 @@
 "use client";
 // inspired by tom is loading
-import React, { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
-import { select } from "framer-motion/client";
-//import { items } from "@/components/website/constant";
+import { useRef, useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 
-function PhotoGrid({title, photos, setSelected}) {
+
+interface PhotoGridProps {
+	title: string;
+	photos: { asset_id: number; url: string; context?: { caption?: string; alt?: string } }[];
+
+}
+
+function PhotoGrid({ title, photos }: PhotoGridProps) {
     
-
+	const [index, setIndex] = useState(-1);
+	
+	
 	return (
-
 		<>
 			<div className='container mx-auto p-4 '>
-                <span className="font-title text-2xl">{title}</span>
+				<span className='font-title text-2xl'>{title}</span>
 				<div className='columns-2 md:columns-3 2xl:columns-4 gap-4 mt-10'>
 					<>
 						{photos.map((photo, index) => (
@@ -21,14 +34,24 @@ function PhotoGrid({title, photos, setSelected}) {
 								key={photo.asset_id}
 								id={photo.asset_id}
 								url={photo.url}
-								title={photo.context?.caption}
+								title={photo.context?.caption || ""}
 								index={index}
-								setSelected={setSelected}
+								onClick={() => setIndex(index)}
 							/>
 						))}
 					</>
 				</div>
 			</div>
+			<Lightbox
+				slides={photos.map((photo) => ({
+					src: photo.url,
+					title: photo.context?.alt || "",
+				}))}
+				open={index >= 0}
+				index={index}
+				close={() => setIndex(-1)}
+				plugins={[Fullscreen, Slideshow, Zoom]}
+			/>
 		</>
 	);
 }
@@ -38,10 +61,10 @@ interface ImageItemProps {
 	url: string;
 	title: string;
 	index: number | string;
-	setSelected: any;
+	onClick: any;
 }
 
-function ImageItem({ url, title, id, setSelected }: ImageItemProps) {
+function ImageItem({ url, title, id, onClick }: ImageItemProps) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 
@@ -52,7 +75,7 @@ function ImageItem({ url, title, id, setSelected }: ImageItemProps) {
 			animate={isInView && "visible"}
 			ref={ref}
 			className="inline-block group w-full rounded-md  relative dark:bg-black bg-white overflow-hidden before:absolute before:top-0 before:content-[''] before:h-full before:w-full hover:before:bg-gradient-to-t dark:before:from-gray-900  before:from-gray-200/90 before:from-5% before:to-transparent before:to-90% cursor-pointer"
-			onClick={() => setSelected(url)}
+			onClick={onClick}
 		>
 			<motion.img
 				layoutId={`card-${id}`}
