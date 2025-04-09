@@ -9,7 +9,9 @@ cloudinary.config({
 	api_secret: process.env.NEXT_PUBLIC_API_SECRET,
 });
 
+
 export async function GET() {
+	console.log(cloudinary.config());
 	try {
 		const result = await cloudinary.search
 			.expression("folder:photos/*")

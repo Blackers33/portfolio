@@ -10,19 +10,20 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-
-
 interface PhotoGridProps {
 	title: string;
-	photos: { asset_id: number; url: string; context?: { caption?: string; alt?: string } }[];
-
+	photos: {
+		asset_id: number;
+		url: string;
+		context?: { caption?: string; alt?: string };
+		filename: string;
+		format: string;
+	}[];
 }
 
 function PhotoGrid({ title, photos }: PhotoGridProps) {
-    
 	const [index, setIndex] = useState(-1);
-	
-	
+
 	return (
 		<>
 			<div className='container mx-auto p-4 '>
@@ -33,7 +34,14 @@ function PhotoGrid({ title, photos }: PhotoGridProps) {
 							<ImageItem
 								key={photo.asset_id}
 								id={photo.asset_id}
-								url={photo.url}
+								url={
+									"https://res.cloudinary.com/" +
+									process.env.NEXT_PUBLIC_CLOUD_NAME +
+									"/image/upload/w_400/" +
+									photo.filename +
+									"." +
+									photo.format
+								}
 								title={photo.context?.caption || ""}
 								index={index}
 								onClick={() => setIndex(index)}
