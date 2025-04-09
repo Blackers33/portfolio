@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import "react-image-lightbox/style.css";
 
 export default function Home() {
-	const [selected, setSelected] = useState(null);
 	const [imagesFolders, setImagesFolders] = useState([]);
 
 	useEffect(() => {
@@ -31,7 +30,6 @@ export default function Home() {
 						key={folderName}
 						title={folderName}
 						photos={photos}
-						setSelected={setSelected}
 					/>
 				))}
 			</div>

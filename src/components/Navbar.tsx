@@ -3,20 +3,21 @@ import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import ThemeToggle from "./ThemeToggle";
+import { usePathname } from "next/navigation";
 
 
-
-type NavElement = { title: string; url: Url };
+type NavElement = { title: string; url: string };
 
 export default function Navbar() {
+	const pathname = usePathname();
+	console.log(pathname);
 	const navElements: NavElement[] = [
-		{ title: "Home", url: "/#" },
+		{ title: "Home", url: "/" },
 		{ title: "Photography", url: "/photography" },
 		{ title: "Music", url: "/music" },
 	];
 
-	const [activePage, setActivePage] = useState("Home")
+	const [activePage, setActivePage] = useState(pathname)
 
 	function elementDisplay(element: NavElement, index: number) {
 		return (
@@ -24,16 +25,16 @@ export default function Navbar() {
 				<Link
 					href={element.url}
 					className={`font-mono relative group ${
-						activePage === element.title
+						activePage === element.url
 							? "text-white hover:text-secondary"
 							: "text-white/50 hover:text-secondary transition-colors"
 					}`}
-					onClick={() => setActivePage(element.title)}
+					onClick={() => setActivePage(element.url)}
 				>
 					{element.title}
 					<span
 						className={`absolute bottom-[-4px] left-0 h-[2px] shadow-[0_0_10px_rgba(255,255,255,0.7)] transition-all duration-300 ease-in-out ${
-							activePage === element.title
+							activePage === element.url
 								? "w-4 opacity-100 bg-white/70 group-hover:bg-secondary"
 								: "w-0 opacity-0 group-hover:w-4 group-hover:opacity-100 bg-secondary"
 						}`}

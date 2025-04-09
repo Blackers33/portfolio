@@ -21,6 +21,7 @@ export interface ProjectCardProps {
 	githubUrl?: string;
 	demoUrl?: string;
 	index?: number;
+	onClick?: () => void;
 }
 
 export function ProjectCard({
@@ -31,6 +32,7 @@ export function ProjectCard({
 	githubUrl = "#",
 	demoUrl = "#",
 	index = 0,
+	onClick
 }: ProjectCardProps) {
 	return (
 		<motion.div
@@ -40,17 +42,17 @@ export function ProjectCard({
 			viewport={{ once: true }}
 			className='group'
 		>
-			<Card className='bg-black/20 backdrop-blur-sm border-primary/50 overflow-hidden h-full flex flex-col '>
-				<div className='relative overflow-hidden -mt-6'>
-					<div className='absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10' />
+			<Card className='bg-gray-900/60 backdrop-blur-sm border-primary/50 overflow-hidden h-full flex flex-col '>
+				<div className='relative overflow-hidden -mt-6' onClick={onClick}>
+					<div className='absolute inset-0' />
 					<img
 						src={image || "/placeholder.svg"}
 						alt={title}
-						className='w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110'
+						className='w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110'
 					/>
 				</div>
 				<CardHeader>
-					<CardTitle className='text-blue-300'>{title}</CardTitle>
+					<CardTitle className='text-blue-300 text-2xl'>{title}</CardTitle>
 					<CardDescription className='text-gray-400'>
 						{description}
 					</CardDescription>
@@ -60,7 +62,7 @@ export function ProjectCard({
 						<Badge
 							key={tag}
 							variant='secondary'
-							className='bg-primary/50 text-blue-300 hover:bg-blue-900/50'
+							className='bg-blue-400/40 text-blue-300 hover:bg-blue-900/50'
 						>
 							{tag}
 						</Badge>

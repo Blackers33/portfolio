@@ -1,10 +1,13 @@
-import React from 'react'
-import StripeCard from './StripeCard';
-import { ProjectCard, ProjectCardProps } from './ProjectCard';
+"use client"
+import React, { useState } from "react";
+import StripeCard from "./StripeCard";
+import { ProjectCard, ProjectCardProps } from "./ProjectCard";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const projects: ProjectCardProps[] = [
 	{
-		title: "E-commerce Website",
+		title: "foodapp",
 		description: "A responsive online store built with React and Node.jsz",
 		image:
 			"https://raw.githubusercontent.com/Blackers33/foodapp/refs/heads/main/screenshot.png",
@@ -34,17 +37,40 @@ const projects: ProjectCardProps[] = [
 ];
 
 export default function Portfolio() {
-  return (
-		<div className='mb-40'>
-			<div className='text-3xl sm:text-4xl lg:text-5xl font-title mb-20'>
-				Portfolio
+	const [index, setIndex] = useState(-1);
+
+	return (
+		<>
+			<div className='mb-40'>
+				<div className='text-3xl sm:text-4xl lg:text-5xl font-title mb-20'>
+					Portfolio
+				</div>
+
+				<div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
+					{projects.map((project, index) => (
+						<ProjectCard
+							key={project.title}
+							{...project}
+							index={index}
+							onClick={() => setIndex(index)}
+						/>
+					))}
+				</div>
 			</div>
-		
-			<div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
-				{projects.map((project, index) => (
-					<ProjectCard key={project.title} {...project} index={index} />
-				))}
-			</div>
-		</div>
+			<Lightbox
+				slides={projects.map((project) => ({
+					src: project.image,
+					title: project?.title || "",
+				}))}
+				open={index >= 0}
+				index={index}
+				close={() => setIndex(-1)}
+				carousel={{ finite: true }}
+				render={{
+					buttonPrev: () => null,
+					buttonNext: () => null,
+				}}
+			/>
+		</>
 	);
 }
