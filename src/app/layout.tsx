@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import { ThemeProvider } from "next-themes";
+import { color } from "framer-motion";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -29,13 +30,14 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				data-theme='dark'
+				className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
 			>
-				<ThemeProvider defaultTheme='dark'>
+
 					<Navbar />
 					<Hero />
 					{children}
-				</ThemeProvider>
+
 			</body>
 		</html>
 	);
