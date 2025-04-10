@@ -1,7 +1,7 @@
 
 
-import Portfolio from "@/components/Portfolio";
-import ContactForm from "@/components/ContactForm";
+import Portfolio from "@/components/home/Portfolio";
+import ContactForm from "@/components/home/ContactForm";
 
 export default function Home() {
 	return (

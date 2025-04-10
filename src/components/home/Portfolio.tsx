@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from "react";
-import StripeCard from "./StripeCard";
 import { ProjectCard, ProjectCardProps } from "./ProjectCard";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";

@@ -1,5 +1,5 @@
 "use client";
-import PhotoGrid from "@/components/PhotoGrid";
+import PhotoGrid from "@/components/photography/PhotoGrid";
 import { useEffect, useState } from "react";
 import "react-image-lightbox/style.css";
 

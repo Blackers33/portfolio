@@ -47,7 +47,7 @@ export default function ContactForm() {
 				<Card className='relative bg-gray-900/60 backdrop-blur-sm border-primary/50'>
 					<CardHeader>
 						<CardTitle className='text-center text-blue-300 text-2xl'>
-							Travaillons ensemble ! envoyez moi un message et j'y répondrais dès que possible.
+							Travaillons ensemble ! Envoyez moi un message et j'y répondrais dès que possible.
 						</CardTitle>
 						<CardDescription className='text-center text-gray-400 text-md'>
 							You can reach out in English as well.

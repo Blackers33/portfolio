@@ -9,6 +9,8 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/plugins/captions.css";
 
 interface PhotoGridProps {
 	title: string;
@@ -54,11 +56,12 @@ function PhotoGrid({ title, photos }: PhotoGridProps) {
 				slides={photos.map((photo) => ({
 					src: photo.url,
 					title: photo.context?.alt || "",
+					description: photo.context?.caption || "",
 				}))}
 				open={index >= 0}
 				index={index}
 				close={() => setIndex(-1)}
-				plugins={[Fullscreen, Slideshow, Zoom]}
+				plugins={[Fullscreen, Slideshow, Zoom, Captions]}
 			/>
 		</>
 	);
@@ -82,7 +85,7 @@ function ImageItem({ url, title, id, onClick }: ImageItemProps) {
 			initial='hidden'
 			animate={isInView && "visible"}
 			ref={ref}
-			className="inline-block group w-full rounded-md  relative dark:bg-black bg-white overflow-hidden before:absolute before:top-0 before:content-[''] before:h-full before:w-full hover:before:bg-gradient-to-t dark:before:from-gray-900  before:from-gray-200/90 before:from-5% before:to-transparent before:to-90% cursor-pointer"
+			className="inline-block group w-full rounded-md  relative dark:bg-black bg-white overflow-hidden before:absolute before:top-0 before:content-[''] before:h-full before:w-full hover:before:bg-gradient-to-t dark:before:from-gray-900/60  before:from-gray-200/90 before:from-5% before:to-transparent before:to-90% cursor-pointer"
 			onClick={onClick}
 		>
 			<motion.img
