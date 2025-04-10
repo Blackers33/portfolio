@@ -12,6 +12,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 export interface ProjectCardProps {
 	title: string;
@@ -29,8 +30,8 @@ export function ProjectCard({
 	description,
 	image,
 	tags,
-	githubUrl = "#",
-	demoUrl = "#",
+	githubUrl,
+	demoUrl,
 	index = 0,
 	onClick
 }: ProjectCardProps) {
@@ -53,7 +54,7 @@ export function ProjectCard({
 				</div>
 				<CardHeader>
 					<CardTitle className='text-blue-300 text-2xl'>{title}</CardTitle>
-					<CardDescription className='text-gray-400'>
+					<CardDescription className='text-gray-400 text-md'>
 						{description}
 					</CardDescription>
 				</CardHeader>
@@ -76,10 +77,10 @@ export function ProjectCard({
 							className='text-blue-400 hover:text-blue-300 hover:bg-blue-950/30'
 							asChild
 						>
-							<a href={githubUrl} target='_blank' rel='noopener noreferrer'>
+							{githubUrl && <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
 								<Github className='w-4 h-4 mr-1' />
 								Code
-							</a>
+							</Link>}
 						</Button>
 						<Button
 							size='sm'
@@ -87,10 +88,10 @@ export function ProjectCard({
 							className='text-blue-400 hover:text-blue-300 hover:bg-blue-950/30'
 							asChild
 						>
-							<a href={demoUrl} target='_blank' rel='noopener noreferrer'>
+							{demoUrl && <Link href={demoUrl} target='_blank' rel='noopener noreferrer'>
 								<ExternalLink className='w-4 h-4 mr-1' />
 								Demo
-							</a>
+							</Link>}
 						</Button>
 					</div>
 				</CardFooter>

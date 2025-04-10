@@ -1,39 +1,11 @@
 "use client"
-import React, { useState } from "react";
-import { ProjectCard, ProjectCardProps } from "./ProjectCard";
+import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import rawProjects from "../../data/projects.json";
+import { ProjectCard, ProjectCardProps } from "./ProjectCard";
 
-const projects: ProjectCardProps[] = [
-	{
-		title: "foodapp",
-		description: "A responsive online store built with React and Node.jsz",
-		image:
-			"https://raw.githubusercontent.com/Blackers33/foodapp/refs/heads/main/screenshot.png",
-		tags: ["React", "Node.js", "MongoDB", "Stripe"],
-		githubUrl: "https://github.com/johndoe/ecommerce",
-		demoUrl: "https://ecommerce-demo.example.com",
-	},
-	{
-		title: "notesapp",
-		description:
-			"Application de prise de notes avec customisation des notes et stockage sur MongoDB",
-		image:
-			"https://github.com/Blackers33/notesapp/blob/main/preview.png?raw=true",
-		tags: ["TypeScript", "Shadcn", "MongoDB", "Next.js"],
-		githubUrl: "https://github.com/Blackers33/notesapp/",
-		demoUrl: "https://notesapp-five-gamma.vercel.app/",
-	},
-	{
-		title: "Cinéfilms",
-		description: "Productivity tool with drag-and-drop functionality",
-		image:
-			"https://raw.githubusercontent.com/Blackers33/cinefilms/refs/heads/main/cinefilms_preview.png",
-		tags: ["React Native", "Express", "MongoDB", "Node.js"],
-		githubUrl: "https://github.com/johndoe/task-manager",
-		demoUrl: "https://tasks-demo.example.com",
-	},
-];
+const projects: ProjectCardProps[] = rawProjects //typage TS
 
 export default function Portfolio() {
 	const [index, setIndex] = useState(-1);
