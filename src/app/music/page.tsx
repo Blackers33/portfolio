@@ -53,34 +53,26 @@ export default function Home() {
 						src='https://www.youtube.com/embed/Ryz742QBAwg'
 						title='YouTube video player'
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-						referrerpolicy='strict-origin-when-cross-origin'
-						allowfullscreen
 					></iframe>
 					<iframe
 						className='w-full sm:w-[560px] h-[315px]'
 						src='https://www.youtube.com/embed/YR9tftOQr0Y'
 						title='YouTube video player'
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-						referrerpolicy='strict-origin-when-cross-origin'
-						allowfullscreen
 					></iframe>
 					<iframe
 						className='w-full sm:w-[560px] h-[315px]'
 						src='https://www.youtube.com/embed/-ow9RcvZia8'
 						title='YouTube video player'
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-						allowfullscreen
 					></iframe>
 					<iframe
 						className='w-full sm:w-[560px] h-[315px]'
-						scrolling='no'
-						frameborder='no'
 						allow='autoplay'
 						src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1255486768&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
 					></iframe>
 					<iframe
 						className='w-full sm:w-[560px] h-[315px]'
-						frameborder='no'
 						allow='autoplay'
 						src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2006338148&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
 					></iframe>
