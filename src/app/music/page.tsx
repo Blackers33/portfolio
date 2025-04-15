@@ -7,7 +7,7 @@ export default function Home() {
 					<h1 className='text-3xl sm:text-4xl lg:text-5xl font-title uppercase text-white'>
 						Music
 					</h1>
-					<p className='mt-6 mb-20 text-lg sm:text-xl text-gray-300'>
+					<p className='mt-6 sm:mb-20 text-lg sm:text-xl text-gray-300'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
 						fuga! Voluptatibus repudiandae ipsum harum enim, debitis obcaecati
 						ipsa incidunt, fuga cumque modi quo voluptates aliquam commodi nam

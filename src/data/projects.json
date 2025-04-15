@@ -1,38 +1,31 @@
 [
 	{
-		"title": "foodapp",
-		"description": "A responsive online store built with React and Node.jsz",
-		"image":
-			"https://raw.githubusercontent.com/Blackers33/foodapp/refs/heads/main/screenshot.png",
-		"tags": ["React", "Node.js", "MongoDB", "Stripe"],
-		"githubUrl": "https://github.com/johndoe/ecommerce",
-		"demoUrl": "https://ecommerce-demo.example.com"
-	},
-	{
 		"title": "notesapp",
-		"description":
-			"Application de prise de notes avec customisation des notes et stockage sur MongoDB",
-		"image":
-			"https://github.com/Blackers33/notesapp/blob/main/preview.png?raw=true",
+		"description": "Application de prise de notes avec customisation des notes et stockage sur MongoDB",
+		"image": "https://github.com/Blackers33/notesapp/blob/main/preview.png?raw=true",
 		"tags": ["TypeScript", "Shadcn", "MongoDB", "Next.js"],
 		"githubUrl": "https://github.com/Blackers33/notesapp/",
 		"demoUrl": "https://notesapp-five-gamma.vercel.app/"
 	},
 	{
 		"title": "Cinéfilms",
-		"description": "Productivity tool with drag-and-drop functionality",
-		"image":
-			"https://raw.githubusercontent.com/Blackers33/cinefilms/refs/heads/main/cinefilms_preview.png",
+		"description": "Projet React native de fin d'études à la Capsule. réalisé en deux semaines avec une équipe de 5 étudiants. Application de rencontre pour cinéphiles.",
+		"image": "https://raw.githubusercontent.com/Blackers33/cinefilms/refs/heads/main/cinefilms_preview.png",
 		"tags": ["React Native", "Express", "MongoDB", "Node.js"],
-		"githubUrl": "https://github.com/johndoe/task-manager",
-		"demoUrl": "https://tasks-demo.example.com"
+		"githubUrl": "https://github.com/Blackers33/cinefilms"
 	},
 	{
 		"title": "Portfolio",
 		"description": "J'ai créé ce portfolio sans template, tout en utilisant Next.js et Tailwind CSS. La bannière a été créée avec Inkscape et Gimp, le ciel étoilé étant celui du jour de ma naissance.",
-		"image":
-			"https://raw.githubusercontent.com/Blackers33/portfolio/refs/heads/main/preview.png",
+		"image": "https://raw.githubusercontent.com/Blackers33/portfolio/refs/heads/main/preview.png",
 		"tags": ["Next.js", "Tailwind CSS", "TypeScript"],
 		"githubUrl": "https://github.com/johndoe/task-manager"
+	},
+	{
+		"title": "foodapp",
+		"description": "A responsive online store built with React and Node.jsz",
+		"image": "https://raw.githubusercontent.com/Blackers33/foodapp/refs/heads/main/screenshot.png",
+		"tags": ["React", "Node.js", "MongoDB", "Stripe"],
+		"githubUrl": "https://github.com/Blackers33/foodapp"
 	}
 ]

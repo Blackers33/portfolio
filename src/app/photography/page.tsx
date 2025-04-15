@@ -20,7 +20,7 @@ export default function Home() {
 				<h1 className='text-3xl sm:text-4xl lg:text-5xl font-title uppercase text-white'>
 					Photography
 				</h1>
-				<p className='mt-6 mb-20 text-lg sm:text-xl text-gray-300 sm:px-50'>
+				<p className='mt-6 sm:mb-20 text-lg sm:text-xl text-gray-300 sm:px-50'>
 					Des photographies que j'ai prises un peu partout dans le monde.
 				</p>
 			</div>
