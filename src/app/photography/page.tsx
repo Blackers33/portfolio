@@ -16,7 +16,7 @@ export default function Home() {
 
 	return (
 		<>
-			<div className='absolute inset-0 flex flex-col items-center justify-end text-center px-4 my-100 z-1'>
+			<div className='absolute inset-0 flex flex-col items-center justify-center text-center w-full h-full z-1'>
 				<h1 className='text-3xl sm:text-4xl lg:text-5xl font-title uppercase text-white'>
 					Photography
 				</h1>

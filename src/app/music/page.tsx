@@ -4,11 +4,11 @@ import { FaS } from "react-icons/fa6";
 export default function Home() {
 	return (
 		<>
-			<div className='absolute inset-0 flex flex-col items-center justify-end text-center px-4 my-80 z-1'>
+			<div className='absolute inset-0 flex flex-col items-center justify-center text-center w-full h-full z-1'>
 				<h1 className='text-3xl sm:text-4xl lg:text-5xl font-title uppercase text-white'>
 					Music
 				</h1>
-				<p className='leading-relaxed mt-6 sm:mb-20 text-lg sm:text-xl text-gray-300 sm:px-50'>
+				<p className=' mt-6 sm:mb-20  sm:text-xl text-gray-300 m-4 sm:px-50'>
 					Un regroupement non exhaustif de musiques & sons produis au fur et à
 					mesure des années. Différents logiciels et matériels sont utilisés;
 					principalement Ableton Live mais aussi Propellerheads Reason. Divers

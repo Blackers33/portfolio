@@ -5,7 +5,7 @@ import { FaDownload } from "react-icons/fa";
 export default function Home() {
 	return (
 		<>
-			<div className='absolute inset-0 flex flex-col items-center justify-end text-center px-4 my-100 z-1'>
+			<div className='absolute inset-0 flex flex-col items-center justify-center text-center w-full h-full z-1'>
 				<h1 className='text-4xl sm:text-5xl lg:text-6xl font-title uppercase text-white'>
 					Sacha Altaber
 				</h1>
@@ -39,7 +39,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div className='bg-background px-2 lg:px-80'>
-				<div className='space-y-4 px-6 text-lg sm:text-xl leading-relaxed mb-40'>
+				<div className='space-y-4 px-4 text-lg sm:text-xl leading-relaxed mb-40'>
 					<p className='mb-8'>
 						Après une carrière dans les secteurs des télécommunications, du
 						réseau et de l’audiovisuel, j’ai pris une décision importante : me
