@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 
 
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,13 @@ export default function ContactForm() {
 	const [message, setMessage] = useState("");
 
 	return (
-		<>
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.5, delay: 0.1 }}
+			viewport={{ once: true }}
+			className='group'
+		>
 			<div className='text-3xl sm:text-4xl lg:text-5xl font-title mb-20'>
 				Contact
 			</div>
@@ -72,6 +79,6 @@ export default function ContactForm() {
 					</CardContent>
 				</Card>
 			</div>
-		</>
+		</motion.div>
 	);
 }

@@ -1,7 +1,6 @@
-
-
 import Portfolio from "@/components/home/Portfolio";
 import ContactForm from "@/components/home/ContactForm";
+import { FaDownload } from "react-icons/fa";
 
 export default function Home() {
 	return (
@@ -17,12 +16,13 @@ export default function Home() {
 					<div className='relative inline-flex  group'>
 						<div className='absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-secondary  to-primary rounded-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'></div>
 						<a
-							href='#portfolio'
+							href='cv.pdf'
 							title='Portfolio'
-							className='relative inline-flex items-center justify-center px-8 py-3.5 text-lg font-bold text-white transition-all duration-200 bg- font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900'
+							className='relative inline-flex items-center justify-center pr-8 pl-13 py-3.5 text-lg font-bold text-white transition-all duration-200 bg- font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900'
 							role='button'
 						>
-							Portfolio
+							<FaDownload className='absolute left-5' />
+							CV
 						</a>
 					</div>
 					<div className='relative inline-flex  group'>
@@ -43,11 +43,11 @@ export default function Home() {
 					<p className='mb-8'>
 						Après une carrière dans les secteurs des télécommunications, du
 						réseau et de l’audiovisuel, j’ai pris une décision importante : me
-						lancer dans le développement web, une discipline qui me
-						passionne profondément. Ce changement de parcours n’a pas seulement
-						marqué une transition professionnelle, mais également une évolution
-						naturelle de mes compétences techniques et de ma capacité à résoudre
-						des problèmes de manière créative.
+						lancer dans le développement web, une discipline qui me passionne
+						profondément. Ce changement de parcours n’a pas seulement marqué une
+						transition professionnelle, mais également une évolution naturelle
+						de mes compétences techniques et de ma capacité à résoudre des
+						problèmes de manière créative.
 					</p>
 					<p className='mb-8'>
 						Mon expérience variée m’a permis d’acquérir une perspective unique

@@ -26,6 +26,7 @@ export default function Portfolio() {
 							onClick={() => setIndex(index)}
 						/>
 					))}
+					D'autres projets sont en cours et à venir...
 				</div>
 			</div>
 			<Lightbox

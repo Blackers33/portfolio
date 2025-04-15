@@ -16,7 +16,7 @@
 	},
 	{
 		"title": "Portfolio",
-		"description": "J'ai créé ce portfolio sans template, tout en utilisant Next.js et Tailwind CSS. La bannière a été créée avec Inkscape et Gimp, le ciel étoilé étant celui du jour de ma naissance.",
+		"description": "J'ai créé ce portfolio sans template, tout en utilisant Next.js et Tailwind CSS. Créée avec Inkscape et Gimp, la bannière intègre un ciel étoilé inspiré d’une véritable carte du ciel.",
 		"image": "https://raw.githubusercontent.com/Blackers33/portfolio/refs/heads/main/preview.png",
 		"tags": ["Next.js", "Tailwind CSS", "TypeScript"],
 		"githubUrl": "https://github.com/johndoe/task-manager"
