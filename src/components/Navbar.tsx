@@ -1,5 +1,4 @@
 "use client"
-import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
